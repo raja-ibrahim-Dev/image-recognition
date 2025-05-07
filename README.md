@@ -109,6 +109,19 @@ A mobile-based attendance solution that uses computer vision to automate student
 
 ---
 
+## API to access the model
+ -  https://rajaibrahim98-imgrec.hf.space/predict/
+ -  Create request from flutter
+   
+    final request = http.MultipartRequest('POST', uri);
+
+    request.files.add(await http.MultipartFile.fromPath(
+      'file',
+      imageFile.path,
+      filename: path.basename(imageFile.path),
+      contentType: MediaType('image', 'jpeg'),
+    ));
+
 ## 🙌 Acknowledgments
 
 Built by [Your Name] using cutting-edge open-source tools and frameworks.
